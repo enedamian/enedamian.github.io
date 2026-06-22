@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | FortunomiX</title>
+    <style>
+        :root {
+            --bg-color: #0B0B0F; /* Deep Luxury Slate */
+            --card-bg: #111118; /* Dark Navy Slate */
+            --accent-color: #818CF8; /* Vibrant Indigo */
+            --accent-gold: #FBBF24; /* Premium Gold */
+            --text-primary: #F3F4F6; /* Off-White */
+            --text-secondary: #94A3B8; /* Muted Slate */
+            --divider: #1E293B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-secondary);
+            line-height: 1.7;
+            padding-bottom: 80px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header Navigation */
+        nav {
+            border-bottom: 1px solid var(--divider);
+            background-color: rgba(11, 11, 15, 0.8);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover {
+            opacity: 0.8;
+        }
+
+        .lang-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-left: 16px;
+            transition: color 0.3s;
+        }
+
+        .lang-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Content styling */
+        article {
+            padding-top: 50px;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        h2 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin: 40px 0 16px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--divider);
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        ul {
+            margin-bottom: 24px;
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: var(--divider);
+            margin: 60px 0;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="https://enedamian.github.io/" class="back-link">← Back to Home</a>
+            <div class="lang-links">
+                <a href="#english">English Version</a>
+                <a href="#espanol">Versión en Español</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- ENGLISH VERSION -->
+        <article id="english">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last updated: June 22, 2026</p>
+
+            <p>This privacy policy applies to the FortunomiX mobile application (herein referred to as "the Application") for Android devices, created by Audaxio Dev (herein referred to as "the Service Provider") as a Freemium service.</p>
+            <p>At FortunomiX, we take privacy and data security seriously. The Application is designed with a <strong>Privacy-by-Design</strong> and <strong>Offline-First</strong> philosophy to give you absolute control and sovereignty over your financial data.</p>
+
+            <h2>1. General No-Data-Collection Commitment</h2>
+            <p>FortunomiX is built on a strict zero-data-collection infrastructure. We do not harvest, aggregate, sell, rent, or share personal, transactional, or financial data from any user of any age. We do not maintain any central user profiles or databases on our servers. Your financial records belong strictly to you and remain entirely under your local custody.</p>
+
+            <h2>2. Core Philosophy: Offline-First & Data Sovereignty</h2>
+            <p>The Application is fundamentally designed to operate without requiring any data to leave your physical device.</p>
+            <ul>
+                <li><strong>Local Financial Data:</strong> All financial records, including income, expenses, categories, recurrent rules, budget goals, and projection scenarios that you enter manually, are stored locally and exclusively on your physical device within a secure, internal SQLite database.</li>
+                <li><strong>No Central Server Logging:</strong> By default, the Service Provider does not host, view, or maintain any backup of your personal financial records. You are the sole custodian and owner of your local database.</li>
+            </ul>
+
+            <h2>3. Optional Cloud Synchronization & Family Pairing (PRO Feature)</h2>
+            <p>If you choose to purchase our PRO tier and pair devices with a family member (using our QR Pairing feature), the Application will synchronize data across those devices.</p>
+            <ul>
+                <li><strong>Secure Infrastructure (Supabase):</strong> Synchronization is powered by Supabase (PostgreSQL).</li>
+                <li><strong>Encryption in Transit:</strong> All synced data is transmitted securely over the internet using industry-standard Transport Layer Security (TLS/HTTPS) encryption.</li>
+                <li><strong>Row-Level Security (RLS):</strong> Our cloud database is fortified with strict PostgreSQL Row-Level Security. This policy of access control ensures that only authenticated devices belonging specifically to your unique family ID (family_id) can read or write your synced data.</li>
+            </ul>
+
+            <h2>4. Smart Capture & AI Ticket Scanner (PRO Feature)</h2>
+            <p>If you utilize our smart receipt scanner or upload PDF bank statements:</p>
+            <ul>
+                <li><strong>Transient AI Processing:</strong> The Application uses a secure, encrypted transit gateway and Supabase Edge Functions connected to Groq (utilizing Llama 3) to extract transaction values, installment counts, dates, and store names.</li>
+                <li><strong>No Persistent Cloud Storage:</strong> This OCR and AI processing is completely <strong>transient and in-memory</strong>. The uploaded image or document is analyzed in-transit and immediately destroyed from the cloud memory after the structured transaction data is returned to your local SQLite database. We do not store, retain, or train AI models with your personal financial documents.</li>
+            </ul>
+
+            <h2>5. Android App Usage Tracking (UsageStatsManager)</h2>
+            <p>The Application includes a smart tracking feature (Android-only) to detect your engagement with digital subscription apps (e.g., streaming, productivity, or gaming software).</p>
+            <ul>
+                <li><strong>Purpose & Permission:</strong> To use this automated optimization tool, the Application requests the specialized Android permission <strong>android.permission.PACKAGE_USAGE_STATS</strong>.</li>
+                <li><strong>Strictly Local Execution:</strong> The querying of screen-time and usage metrics is processed <strong>strictly and exclusively on your physical device</strong>. Under no circumstances are your app usage habits, active packages, or engagement statistics sent to Audaxio Dev, Supabase, or any other third party.</li>
+            </ul>
+
+            <h2>6. Third-Party Services & Monetization</h2>
+            <p>To keep our core features free, we display advertisements and process transactions through secure global partners. These third-party services may collect data to identify your device.</p>
+            <ul>
+                <li><strong>Google AdMob (Advertising):</strong> We use Google AdMob as our ad provider. AdMob may collect and process device-specific data, such as your Advertising ID, IP address, and usage patterns to deliver targeted or non-targeted ads.
+                    <br><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent-color);">Google AdMob Privacy Policy</a>
+                </li>
+                <li style="margin-top: 12px;"><strong>RevenueCat (In-App Purchases):</strong> We use RevenueCat to process store receipts, validate premium entitlements, and manage active subscriptions. RevenueCat receives an anonymous subscriber identifier and your encrypted Google Play purchase token. No raw credit card numbers or personal identity data are shared with us.
+                    <br><a href="https://www.revenuecat.com/privacy" target="_blank" style="color: var(--accent-color);">RevenueCat Privacy Policy</a>
+                </li>
+            </ul>
+
+            <h2>7. Local Notifications & Reminders</h2>
+            <p>The Application uses local notifications to provide daily reminders for expense logging. These notifications are generated entirely within your device's local operating system and do not involve data transmission of any kind to external servers.</p>
+
+            <h2>8. Data Control & International Privacy Rights (GDPR & CCPA)</h2>
+            <p>We respect and support global data protection frameworks, including the European Union's General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).</p>
+            <p>Even though we are an offline-first app, we guarantee the following rights:</p>
+            <ul>
+                <li><strong>Right to Access and Portability:</strong> Since your data lives on your device, you can view all your transactions in the app at any time.</li>
+                <li><strong>Right to Deletion:</strong>
+                    <br>• <strong>Local Data:</strong> You can permanently delete all local SQLite records by clearing the app data/cache in your Android system settings or by uninstalling the app.
+                    <br>• <strong>Cloud Data (PRO Sync):</strong> If you utilized our Cloud Sync, you can permanently purge all family records from our Supabase servers at any time by executing a "Factory Reset" inside the Application settings or by emailing us at audaxiodev@gmail.com.
+                </li>
+            </ul>
+
+            <h2>9. Children’s Privacy (COPPA & GDPR-K Compliance)</h2>
+            <p>Because the Service Provider maintains a strict, universal No-Data-Collection Policy for all users, we naturally do not knowingly collect, solicit, or process personal or financial information from children under the age of 18. If you are a parent or guardian and believe your child has used the Application, please be assured that any data they entered remains strictly stored on their physical device and cannot be accessed by us.</p>
+
+            <h2>10. Security Limitations</h2>
+            <p>We implement reasonable administrative, technical, and physical security measures to protect your synchronized cloud data (such as SSL/TLS and Postgres RLS policies). However, because the primary source of truth resides on your device, the security of your financial records ultimately depends on the physical security of your smartphone, your passcode protection, and your data backup practices. No method of internet transmission is 100% secure.</p>
+
+            <h2>11. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time to align with new features or store policies. Any changes will be posted on this page with an updated "Last updated" date. We recommend reviewing this page periodically.</p>
+
+            <h2>12. Contact Us</h2>
+            <p>If you have any questions, suggestions, or requests regarding this Privacy Policy or your data, please contact us at:</p>
+            <p><strong>Email:</strong> <a href="mailto:audaxiodev@gmail.com" style="color: var(--accent-color);">audaxiodev@gmail.com</a></p>
+        </article>
+
+        <hr>
+
+        <!-- VERSION EN ESPAÑOL -->
+        <article id="espanol">
+            <h1>Política de Privacidad</h1>
+            <p class="last-updated">Última actualización: 22 de Junio de 2026</p>
+
+            <p>Esta política de privacidad se aplica a la aplicación móvil FortunomiX (en adelante, "la Aplicación") para dispositivos Android, creada por Audaxio Dev (en adelante, "el Proveedor del Servicio") como un servicio Freemium.</p>
+            <p>En FortunomiX, nos tomamos muy en serio la privacidad y la seguridad de los datos. La Aplicación está diseñada con una filosofía de <strong>Privacidad por Diseño</strong> y <strong>Offline-First</strong> para brindarte un control y una soberanía absolutos sobre tus datos financieros.</p>
+
+            <h2>1. Compromiso General de No Recopilación de Datos</h2>
+            <p>FortunomiX se basa en una infraestructura estricta de cero recopilación de datos. No recopilamos, agregamos, vendemos, alquilamos ni compartimos datos personales, transaccionales o financieros de ningún usuario de ninguna edad. No mantenemos perfiles de usuario centrales ni bases de datos en nuestros servidores. Tus registros financieros te pertenecen estrictamente a ti y permanecen por completo bajo tu custodia local.</p>
+
+            <h2>2. Filosofía Central: Offline-First y Soberanía de Datos</h2>
+            <p>La Aplicación está diseñada fundamentalmente para funcionar sin necesidad de que los datos salgan de tu dispositivo físico.</p>
+            <ul>
+                <li><strong>Datos Financieros Locales:</strong> Todos los registros financieros, incluidos los ingresos, gastos, categorías, reglas recurrentes, metas presupuestarias y escenarios de proyección que ingreses manualmente, se almacenan localmente y exclusivamente en tu dispositivo físico dentro de una base de datos SQLite interna segura.</li>
+                <li><strong>Sin Registro en Servidores Centrales:</strong> Por defecto, el Proveedor del Servicio no aloja, visualiza ni mantiene ninguna copia de seguridad de tus registros financieros personales. Tú eres el único custodio y propietario de tu base de datos local.</li>
+            </ul>
+
+            <h2>3. Sincronización en la Nube Opcional y Emparejamiento Familiar (Función PRO)</h2>
+            <p>Si decides adquirir nuestro plan PRO y emparejar tus dispositivos con un miembro de tu familia (usando nuestra función de emparejamiento QR), la Aplicación sincronizará los datos entre esos dispositivos.</p>
+            <ul>
+                <li><strong>Infraestructura Segura (Supabase):</strong> La sincronización funciona a través de Supabase (PostgreSQL).</li>
+                <li><strong>Cifrado en Tránsito:</strong> Todos los datos sincronizados se transmiten de forma segura a través de Internet mediante cifrado de seguridad de capa de transporte (TLS/HTTPS) estándar de la industria.</li>
+                <li><strong>Seguridad a Nivel de Fila (RLS):</strong> Nuestra base de datos en la nube está protegida con seguridad estricta a nivel de fila de PostgreSQL. Esta política de control de acceso garantiza que solo los dispositivos autenticados que pertenezcan específicamente a tu ID familiar único (family_id) puedan leer o escribir tus datos sincronizados.</li>
+            </ul>
+
+            <h2>4. Captura Inteligente y Escáner de Tickets por IA (Función PRO)</h2>
+            <p>Si utilizas nuestro escáner inteligente de recibos o subes estados de cuenta bancarios en PDF:</p>
+            <ul>
+                <li><strong>Procesamiento de IA Transitorio:</strong> La Aplicación utiliza una pasarela de tránsito encriptada segura y Edge Functions de Supabase conectadas a Groq (utilizando Llama 3) para extraer valores de transacción, recuentos de cuotas, fechas y nombres de comercios.</li>
+                <li><strong>Sin Almacenamiento Persistente en la Nube:</strong> Este procesamiento de OCR e IA es completamente <strong>transitorio y en memoria</strong>. La imagen o el documento cargado se analiza en tránsito y se destruye inmediatamente de la memoria de la nube después de que los datos estructurados de la transacción se devuelven a tu base de datos SQLite local. No almacenamos, retenemos ni entrenamos modelos de IA con tus documentos financieros personales.</li>
+            </ul>
+
+            <h2>5. Seguimiento del Uso de Aplicaciones en Android (UsageStatsManager)</h2>
+            <p>La Aplicación incluye una función de seguimiento inteligente (solo para Android) para detectar tu interacción con aplicaciones de suscripción digital (por ejemplo, software de streaming, productividad o juegos).</p>
+            <ul>
+                <li><strong>Propósito y Permiso:</strong> Para utilizar esta herramienta de optimización automatizada, la Aplicación solicita el permiso especializado de Android <strong>android.permission.PACKAGE_USAGE_STATS</strong>.</li>
+                <li><strong>Ejecución Estrictamente Local:</strong> La consulta de métricas de tiempo en pantalla y uso se procesa <strong>estricta y exclusivamente en tu dispositivo físico</strong>. Bajo ninguna circunstancia tus hábitos de uso de aplicaciones, paquetes activos o estadísticas de interacción se envían a Audaxio Dev, Supabase o cualquier otro tercero.</li>
+            </ul>
+
+            <h2>6. Servicios de Terceros y Monetización</h2>
+            <p>Para mantener nuestras funciones principales gratuitas, mostramos anuncios y procesamos transacciones a través de socios globales seguros. Estos servicios de terceros pueden recopilar datos para identificar tu dispositivo.</p>
+            <ul>
+                <li><strong>Google AdMob (Publicidad):</strong> Utilizamos Google AdMob como nuestro proveedor de anuncios. AdMob puede recopilar y procesar datos específicos del dispositivo, como tu ID de publicidad, dirección IP y patrones de uso para entregar anuncios personalizados o no personalizados.
+                    <br><a href="https://policies.google.com/privacy" target="_blank" style="color: var(--accent-color);">Política de Privacidad de Google AdMob</a>
+                </li>
+                <li style="margin-top: 12px;"><strong>RevenueCat (Compras dentro de la aplicación):</strong> Utilizamos RevenueCat para procesar recibos de la tienda, validar privilegios premium y gestionar suscripciones activas. RevenueCat recibe un identificador de suscriptor anónimo y tu token de compra encriptado de Google Play. No se comparte información de identidad personal ni números de tarjetas de crédito con nosotros.
+                    <br><a href="https://www.revenuecat.com/privacy" target="_blank" style="color: var(--accent-color);">Política de Privacidad de RevenueCat</a>
+                </li>
+            </ul>
+
+            <h2>7. Notificaciones Locales y Recordatorios</h2>
+            <p>La Aplicación utiliza notificaciones locales para proporcionar recordatorios diarios para el registro de gastos. Estas notificaciones se generan por completo dentro del sistema operativo local de tu dispositivo y no implican la transmisión de datos de ningún tipo a servidores externos.</p>
+
+            <h2>8. Control de Datos y Derechos Internacionales de Privacidad (GDPR y CCPA)</h2>
+            <p>Respetamos y respaldamos los marcos globales de protección de datos, incluido el Reglamento General de Protección de Datos de la Unión Europea (GDPR) y la Ley de Privacidad del Consumidor de California (CCPA).</p>
+            <p>Aunque somos una aplicación offline-first, garantizamos los siguientes derechos:</p>
+            <ul>
+                <li><strong>Derecho de Acceso y Portabilidad:</strong> Dado que tus datos viven en tu dispositivo, puedes ver todas tus transacciones en la app en cualquier momento.</li>
+                <li><strong>Derecho de Eliminación:</strong>
+                    <br>• <strong>Datos Locales:</strong> Puedes eliminar permanentemente todos los registros SQLite locales borrando los datos/caché de la app en la configuración del sistema Android o desinstalando la app.
+                    <br>• <strong>Datos en la Nube (Sincronización PRO):</strong> Si utilizaste nuestra Sincronización en la Nube, puedes purgar permanentemente todos los registros familiares de nuestros servidores Supabase en cualquier momento ejecutando un "Restablecimiento de Fábrica" dentro de la configuración de la Aplicación o enviándonos un correo electrónico a audaxiodev@gmail.com.
+                </li>
+            </ul>
+
+            <h2>9. Privacidad Infantil (Cumplimiento de COPPA y GDPR-K)</h2>
+            <p>Debido a que el Proveedor del Servicio mantiene una Política estricta y universal de No Recopilación de Datos para todos los usuarios, naturalmente no recopilamos, solicitamos ni procesamos a sabiendas información personal o financiera de niños menores de 18 años. Si eres padre o tutor y crees que tu hijo ha utilizado la Aplicación, ten la seguridad de que todos los datos que ingresó permanecen estrictamente almacenados en su dispositivo físico y no podemos acceder a ellos.</p>
+
+            <h2>10. Limitaciones de Seguridad</h2>
+            <p>Implementamos medidas de seguridad administrativas, técnicas y físicas razonables para proteger tus datos sincronizados en la nube (como SSL/HTTPS y políticas de RLS de Postgres). Sin embargo, debido a que la fuente primaria de verdad reside en tu dispositivo, la seguridad de tus registros financieros depende en última instancia de la seguridad física de tu teléfono inteligente, la protección de tu contraseña y tus prácticas de copia de seguridad de datos. Ningún método de transmisión por Internet es 100% seguro.</p>
+
+            <h2>11. Cambios a esta Política de Privacidad</h2>
+            <p>Podemos actualizar nuestra Política de Privacidad de vez en cuando para alinearla con nuevas funciones o políticas de la tienda. Cualquier cambio se publicará en esta página con una fecha actualizada de "Última actualización". Recomendamos revisar esta página periódicamente.</p>
+
+            <h2>12. Contacto</h2>
+            <p>Si tienes alguna pregunta, sugerencia o solicitud con respecto a esta Política de Privacidad o tus datos, no dudes en contactarnos en:</p>
+            <p><strong>Correo electrónico:</strong> <a href="mailto:audaxiodev@gmail.com" style="color: var(--accent-color);">audaxiodev@gmail.com</a></p>
+        </article>
+    </main>
+
+</body>
+</html>
