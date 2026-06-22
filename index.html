@@ -179,6 +179,46 @@
             font-size: 0.8rem;
             color: #475569;
         }
+        /* 📱 RESPONSIVE MEDIA QUERY: Optimización de la Landing Page en Navegadores Móviles */
+        @media (max-width: 600px) {
+            header {
+                padding: 110px 0 50px;
+            }
+
+            h1 {
+                font-size: 2.6rem;
+                line-height: 1.2;
+            }
+
+            .tagline {
+                font-size: 1.05rem;
+                margin-bottom: 36px;
+            }
+
+            .features {
+                grid-template-columns: 1fr; /* Colapsa las tarjetas a una sola columna vertical */
+                padding: 40px 0;
+                gap: 20px;
+            }
+
+            .card {
+                padding: 30px 24px;
+            }
+
+            .cta-section {
+                padding: 70px 0;
+            }
+
+            .btn {
+                padding: 14px 36px;
+                font-size: 0.95rem;
+            }
+
+            .footer-links a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
     </style>
 </head>
 <body>
