@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FortunomiX | Your Financial Ally</title>
+    <style>
+        :root {
+            --bg-color: #0B0B0F; /* Deep Luxury Slate */
+            --card-bg: #111118; /* Dark Navy Slate */
+            --accent-color: #818CF8; /* Vibrant Indigo */
+            --accent-gold: #FBBF24; /* Premium Gold */
+            --text-primary: #F3F4F6; /* Off-White */
+            --text-secondary: #94A3B8; /* Muted Slate */
+            --footer-bg: #07070A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar / Selector */
+        nav {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            z-index: 1000;
+        }
+
+        select#langSelector {
+            background: var(--card-bg);
+            color: var(--text-primary);
+            border: 1px solid #222;
+            padding: 8px 16px;
+            border-radius: 20px;
+            outline: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: border-color 0.3s;
+        }
+
+        select#langSelector:hover {
+            border-color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        header {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: radial-gradient(circle at top, #1E1B4B 0%, var(--bg-color) 65%);
+            position: relative;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 24px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #FFFFFF 30%, var(--accent-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 650px;
+            margin: 0 auto 44px;
+            line-height: 1.5;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 40px 32px;
+            border-radius: 24px;
+            border: 1px solid #1E293B;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-color);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1);
+        }
+
+        .card h3 {
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+            color: var(--accent-gold); /* Toque dorado premium */
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Call to Action */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-color) 0%, #09090D 100%);
+            border-top: 1px solid #111118;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 44px;
+            background: linear-gradient(135deg, var(--accent-color), #6366F1);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 1.05rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--footer-bg);
+            padding: 50px 0;
+            text-align: center;
+            border-top: 1px solid #111118;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            margin: 0 16px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            border-color: rgba(99, 102, 241, 0.3);
+            background-color: rgba(99, 102, 241, 0.05);
+        }
+
+        .copyright {
+            margin-top: 24px;
+            font-size: 0.8rem;
+            color: #475569;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <select id="langSelector" onchange="updateLanguage()">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+        </select>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1 id="main-title">FortunomiX</h1>
+            <p class="tagline" id="tagline">Predict your personal and family financial future. Manage your wealth offline with complete privacy and smart projections.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.audaxiodev.fortunomix" class="btn" id="btn-download">Download Now</a>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="features">
+            <div class="card">
+                <h3 id="feat1-title">Absolute Privacy</h3>
+                <p id="feat1-desc">No accounts, no cloud harvesting. Your transaction records stay safely on your device's secure SQLite database.</p>
+            </div>
+            <div class="card">
+                <h3 id="feat2-title">Predictive Projections</h3>
+                <p id="feat2-desc">Anticipate your personal cash flow up to 12 months ahead with custom, compounding inflation adjustment parameters.</p>
+            </div>
+            <div class="card">
+                <h3 id="feat3-title">Smart Capture</h3>
+                <p id="feat3-desc">Skip tedious financial forms. Register spending in seconds using receipt photo scanning (OCR) or secure voice dictation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 id="cta-title">Ready to take control of your financial destiny?</h2>
+            <p style="margin-bottom: 40px; color: var(--text-secondary); font-size: 1.1rem;" id="cta-sub">Join the FortunomiX community today.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.audaxiodev.fortunomix" class="btn" id="btn-cta">Start Free Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://enedamian.github.io/privacy" target="_blank">Privacy Policy</a>
+                <a href="https://enedamian.github.io/terms" target="_blank">Terms of Service</a>
+            </div>
+            <p class="copyright">© <span id="year">2026</span> FortunomiX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                tagline: "Predict your personal and family financial future. Manage your wealth offline with complete privacy and smart projections.",
+                btnDownload: "Download Now",
+                feat1Title: "Absolute Privacy",
+                feat1Desc: "No accounts, no cloud harvesting. Your transaction records stay safely on your device's secure SQLite database.",
+                feat2Title: "Predictive Projections",
+                feat2Desc: "Anticipate your personal cash flow up to 12 months ahead with custom, compounding inflation adjustment parameters.",
+                feat3Title: "Smart Capture",
+                feat3Desc: "Skip tedious financial forms. Register spending in seconds using receipt photo scanning (OCR) or secure voice dictation.",
+                ctaTitle: "Ready to take control of your financial destiny?",
+                ctaSub: "Join the FortunomiX community today.",
+                btnCTA: "Start Free Now"
+            },
+            es: {
+                tagline: "Predice tu futuro financiero personal y familiar. Gestiona tu patrimonio offline con total privacidad y proyecciones inteligentes.",
+                btnDownload: "Descargar ahora",
+                feat1Title: "Privacidad Absoluta",
+                feat1Desc: "Sin cuentas ni servidores. Tus registros financieros permanecen seguros en la base de datos SQLite de tu dispositivo.",
+                feat2Title: "Proyecciones Predictivas",
+                feat2Desc: "Anticipa tu flujo de caja personal hasta 12 meses hacia adelante con parámetros de ajuste por inflación compuesta.",
+                feat3Title: "Captura Inteligente",
+                feat3Desc: "Olvídate de formularios tediosos. Registra gastos en segundos con escaneo de fotos de tickets (OCR) o dictado por voz.",
+                ctaTitle: "¿Listo para tomar el control de tu destino financiero?",
+                ctaSub: "Únete a la comunidad de FortunomiX hoy mismo.",
+                btnCTA: "Comenzar Gratis"
+            }
+        };
+
+        function updateLanguage() {
+            const lang = document.getElementById('langSelector').value;
+            const t = translations[lang];
+
+            document.getElementById('tagline').innerText = t.tagline;
+            document.getElementById('btn-download').innerText = t.btnDownload;
+            document.getElementById('feat1-title').innerText = t.feat1Title;
+            document.getElementById('feat1-desc').innerText = t.feat1Desc;
+            document.getElementById('feat2-title').innerText = t.feat2Title;
+            document.getElementById('feat2-desc').innerText = t.feat2Desc;
+            document.getElementById('feat3-title').innerText = t.feat3Title;
+            document.getElementById('feat3-desc').innerText = t.feat3Desc;
+            document.getElementById('cta-title').innerText = t.ctaTitle;
+            document.getElementById('cta-sub').innerText = t.ctaSub;
+            document.getElementById('btn-cta').innerText = t.btnCTA;
+        }
+
+        window.onload = () => {
+            // 🚀 DETECCIÓN INTELIGENTE DE IDIOMA: Detecta el idioma del navegador nativamente
+            const browserLang = navigator.language || navigator.userLanguage;
+            const defaultLang = (browserLang && browserLang.startsWith('es')) ? 'es' : 'en';
+            
+            // Setea el valor en el selector visual
+            document.getElementById('langSelector').value = defaultLang;
+            
+            // Aplica los textos correspondientes
+            updateLanguage();
+
+            // AÑO DE COPYRIGHT DINÁMICO: Asegura que el footer siempre muestre el año actual
+            document.getElementById('year').innerText = new Date().getFullYear();
+        };
+    </script>
+</body>
+</html>
