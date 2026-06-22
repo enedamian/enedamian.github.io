@@ -131,6 +131,61 @@
             margin-bottom: 30px;
             font-weight: bold;
         }
+        /* 📱 RESPONSIVE MEDIA QUERY: Optimización para Celulares y WebViews In-App */
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 16px;
+            }
+            
+            nav {
+                padding: 10px 0;
+            }
+
+            .nav-container {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* 🚀 TRUCO DE CONTROL DE FLUJO: 
+               Ocultamos el enlace "Back to Home" en celulares para evitar que el usuario 
+               navegue accidentalmente a la landing page adentro del mini-modal de la app */
+            .back-link {
+                display: none; 
+            }
+
+            .lang-links {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+                width: 100%;
+            }
+
+            .lang-links a {
+                margin: 0;
+                font-size: 0.85rem;
+            }
+
+            article {
+                padding-top: 30px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+                margin: 30px 0 12px;
+            }
+
+            p, li {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
     </style>
 </head>
 <body>
